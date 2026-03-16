@@ -1,0 +1,40 @@
+.footer {
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.6);
+  padding: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.footer-logo {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 22px; font-weight: 800; color: white; margin-bottom: 12px;
+}
+.footer-logo span { color: var(--sage-light); }
+.footer-desc { font-size: 13px; line-height: 1.8; }
+
+.footer-col h4 { color: white; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col li {
+  font-size: 13px; margin-bottom: 10px;
+  cursor: pointer; transition: color 0.2s;
+}
+.footer-col li:hover { color: white; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 28px;
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .footer { padding: 40px 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}

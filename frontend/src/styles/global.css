@@ -1,0 +1,47 @@
+/* ── CSS VARIABLES ── */
+:root {
+  --cream: #FAF6F0;
+  --warm-white: #FFFDF9;
+  --sage: #7D9B76;
+  --sage-light: #A8BFA3;
+  --sage-dark: #4E7047;
+  --terracotta: #C4856A;
+  --terracotta-light: #DBA991;
+  --brown: #6B4E3D;
+  --brown-light: #9B7B6E;
+  --text-dark: #2C2420;
+  --text-mid: #5A4A42;
+  --text-light: #8A7A74;
+  --border: #E8DDD6;
+  --shadow: rgba(107, 78, 61, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-30px) scale(1.03); }
+}

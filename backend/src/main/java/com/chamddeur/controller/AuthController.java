@@ -1,0 +1,21 @@
+package com.chamddeur.controller;
+
+import com.chamddeur.dto.AuthDto;
+import com.chamddeur.service.AuthService;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/auth")
+@RequiredArgsConstructor
+public class AuthController {
+
+    private final AuthService authService;
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthDto.TokenResponse> login(@Valid @RequestBody AuthDto.LoginRequest req) {
+        return ResponseEntity.ok(authService.login(req));
+    }
+}

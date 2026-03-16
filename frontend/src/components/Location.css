@@ -1,0 +1,91 @@
+.location-section {
+  padding: 100px 60px;
+  background: var(--cream);
+}
+
+.location-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.location-map {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.map-placeholder {
+  background: var(--warm-white);
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-light);
+}
+.map-pin { font-size: 36px; }
+.map-placeholder p { font-size: 14px; color: var(--text-mid); font-weight: 500; }
+.map-hint { font-size: 12px; color: var(--text-light); }
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.location-address {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+}
+.loc-icon { font-size: 24px; flex-shrink: 0; }
+.location-address h4 { font-size: 13px; color: var(--text-light); margin-bottom: 6px; }
+.location-address p { font-size: 15px; color: var(--text-dark); font-weight: 500; line-height: 1.7; }
+
+.location-transport-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transport-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.transport-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.transport-badge.subway { background: rgba(0,100,200,0.1); color: #0064c8; }
+.transport-badge.bus    { background: rgba(78,112,71,0.15); color: var(--sage-dark); }
+.transport-badge.car    { background: rgba(107,78,61,0.1); color: var(--brown); }
+
+.transport-item strong { color: var(--text-dark); }
+
+@media (max-width: 900px) {
+  .location-section { padding: 80px 24px; }
+  .location-grid { grid-template-columns: 1fr; gap: 32px; }
+}

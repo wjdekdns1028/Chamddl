@@ -1,0 +1,95 @@
+.lp-wrap {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--cream);
+  position: relative; overflow-x: hidden;
+  padding: 40px 20px;
+}
+
+.lp-bg-circle {
+  position: absolute; border-radius: 50%; pointer-events: none; opacity: 0.15;
+}
+.lp-c1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--sage-light), transparent 70%);
+  top: -120px; right: -80px;
+  animation: float 9s ease-in-out infinite;
+}
+.lp-c2 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, var(--terracotta-light), transparent 70%);
+  bottom: -80px; left: -60px;
+  animation: float 11s ease-in-out infinite reverse;
+}
+
+.lp-card {
+  background: var(--warm-white);
+  border-radius: 24px;
+  padding: 52px 48px;
+  width: 100%; max-width: 420px;
+  box-shadow: 0 20px 60px var(--shadow);
+  border: 1px solid var(--border);
+  position: relative; z-index: 10000;
+  animation: fadeUp 0.6s ease;
+}
+
+.lp-logo {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 32px; font-weight: 800;
+  color: var(--brown); text-align: center; margin-bottom: 6px;
+}
+.lp-logo span { color: var(--sage-dark); }
+
+.lp-subtitle {
+  text-align: center; font-size: 14px;
+  color: var(--text-light); margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+/* 작성 박스 */
+.lp-writebox {
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--cream);
+  padding: 20px 18px;
+  margin-bottom: 16px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.lp-form { display: flex; flex-direction: column; gap: 0; }
+
+.lp-group { display: flex; flex-direction: column; gap: 6px; }
+.lp-group label { font-size: 12px; font-weight: 500; color: var(--text-light); }
+.lp-group input {
+  padding: 11px 14px;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-size: 15px; color: var(--text-dark);
+  background: var(--warm-white); font-family: 'Pretendard', sans-serif;
+  outline: none; transition: border-color 0.2s;
+}
+.lp-group input:focus { border-color: var(--sage); }
+
+.lp-error {
+  font-size: 13px; color: #DC3C3C;
+  background: rgba(220,60,60,0.08);
+  padding: 10px 14px; border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.lp-btn {
+  background: var(--sage-dark); color: white;
+  padding: 15px; border-radius: 10px; border: none;
+  font-size: 15px; font-weight: 500; cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  transition: all 0.3s; margin-top: 4px; width: 100%;
+}
+.lp-btn:hover:not(:disabled) { background: var(--brown); transform: translateY(-1px); }
+.lp-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.lp-back {
+  background: none; border: none; color: var(--text-light);
+  font-size: 13px; cursor: pointer; font-family: 'Pretendard', sans-serif;
+  margin-top: 16px; text-align: center; transition: color 0.2s;
+  display: block; width: 100%;
+}
+.lp-back:hover { color: var(--sage-dark); }

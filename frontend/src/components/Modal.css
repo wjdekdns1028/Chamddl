@@ -1,0 +1,59 @@
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 500;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.modal {
+  background: var(--warm-white);
+  border-radius: 24px;
+  padding: 44px;
+  width: 90%; max-width: 520px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; font-size: 24px;
+  cursor: pointer; color: var(--text-light);
+}
+
+.modal h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 24px; color: var(--text-dark); margin-bottom: 6px;
+}
+.modal-subtitle { font-size: 13px; color: var(--text-light); margin-bottom: 32px; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-size: 13px; color: var(--text-mid);
+  margin-bottom: 8px; font-weight: 500;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-size: 14px; color: var(--text-dark);
+  background: var(--cream);
+  font-family: 'Pretendard', sans-serif;
+  transition: border-color 0.2s; outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--sage); }
+.form-group textarea { height: 120px; resize: none; }
+
+.form-submit {
+  width: 100%; background: var(--sage-dark); color: white;
+  padding: 15px; border-radius: 10px;
+  font-size: 15px; font-weight: 500; border: none; cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  transition: background 0.2s, transform 0.2s; margin-top: 8px;
+}
+.form-submit:hover:not(:disabled) { background: var(--brown); transform: translateY(-1px); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }

@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Backend
+backend/target/
+backend/*.log
+
+# Secrets (dev config has hardcoded credentials)
+backend/src/main/resources/application-dev.yml

@@ -1,0 +1,27 @@
+.admin-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--text-dark); color: white;
+  padding: 14px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  z-index: 200; font-size: 13px;
+  border-top: 2px solid var(--sage-dark);
+}
+
+.admin-bar-left { display: flex; align-items: center; gap: 12px; }
+.admin-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage-light); }
+.admin-bar-btns { display: flex; gap: 12px; }
+
+.btn-admin {
+  background: var(--sage-dark); color: white; border: none;
+  padding: 8px 18px; border-radius: 6px; font-size: 13px;
+  cursor: pointer; font-family: 'Pretendard', sans-serif; transition: all 0.2s;
+}
+.btn-admin:hover { background: var(--sage); }
+
+.btn-admin-outline {
+  background: transparent; color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 18px; border-radius: 6px; font-size: 13px;
+  cursor: pointer; font-family: 'Pretendard', sans-serif; transition: all 0.2s;
+}
+.btn-admin-outline:hover { color: white; border-color: rgba(255,255,255,0.5); }
